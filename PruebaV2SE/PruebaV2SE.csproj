@@ -194,6 +194,11 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Business\ActivityBusiness.cs" />
+    <Compile Include="Business\AuthorBusiness.cs" />
+    <Compile Include="Business\BookBusiness.cs" />
+    <Compile Include="Business\CoverPhotoBusiness.cs" />
+    <Compile Include="Business\UserBusiness.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
