@@ -67,6 +67,15 @@ namespace PruebaV2SE.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtLibro;
         
         /// <summary>
+        /// Control lblConsult.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConsult;
+        
+        /// <summary>
         /// Control btnHome.
         /// </summary>
         /// <remarks>
@@ -83,15 +92,6 @@ namespace PruebaV2SE.Pages {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnConsultar;
-        
-        /// <summary>
-        /// Control lblConsult.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblConsult;
         
         /// <summary>
         /// Control gvwLibro.
