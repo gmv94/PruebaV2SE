@@ -15,7 +15,7 @@ namespace PruebaV2SE.Models
     {
         public string title { get; set; }
         public string publishDate { get; set; }
-        public Nullable<int> pageCount { get; set; }
+        public string pageCount { get; set; }
         public string excerpt { get; set; }
         public string description { get; set; }
         public string Author { get; set; }

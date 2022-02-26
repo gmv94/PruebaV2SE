@@ -150,6 +150,8 @@
       <DependentUpon>modelDBSE.edmx</DependentUpon>
       <LastGenOutput>modelDBSE.cs</LastGenOutput>
     </Content>
+    <Content Include="Pages\Consultas.aspx" />
+    <Content Include="Pages\Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -242,6 +244,20 @@
     </Compile>
     <Compile Include="Models\SpConsultaPorLibro_Result.cs">
       <DependentUpon>modelDBSE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Consultas.aspx.cs">
+      <DependentUpon>Consultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Consultas.aspx.designer.cs">
+      <DependentUpon>Consultas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
