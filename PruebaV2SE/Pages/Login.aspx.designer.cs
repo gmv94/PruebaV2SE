@@ -31,15 +31,6 @@ namespace PruebaV2SE.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPw;
         
         /// <summary>
-        /// Control btnConsult.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConsult;
-        
-        /// <summary>
         /// Control lblConsult.
         /// </summary>
         /// <remarks>
@@ -47,5 +38,14 @@ namespace PruebaV2SE.Pages {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblConsult;
+        
+        /// <summary>
+        /// Control btnConsult.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConsult;
     }
 }
