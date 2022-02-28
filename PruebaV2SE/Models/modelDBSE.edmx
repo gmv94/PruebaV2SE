@@ -43,6 +43,48 @@
           <Parameter Name="nameUser" Type="nvarchar" Mode="In" />
           <Parameter Name="password" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="SpOrdenarFechaAutorAscendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarFechaAutorDescendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarFechaLibroAscendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarFechaLibroDescendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarPaginasAutorAscendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarPaginasAutorDescendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarPaginasLibroAscendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarPaginasLibroDescendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarTituloAutorAscendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarTituloAutorDescendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarTituloLibroAscendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SpOrdenarTituloLibroDescendente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="DBPruebaSEModelStoreContainer" />
       </Schema>
     </edmx:StorageModels>
@@ -88,6 +130,48 @@
             <Parameter Name="nameUser" Mode="In" Type="String" />
             <Parameter Name="password" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="SpOrdenarFechaAutorAscendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarFechaAutorAscendente_Result)">
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarFechaAutorDescendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarFechaAutorDescendente_Result)">
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarFechaLibroAscendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarFechaLibroAscendente_Result)">
+            <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarFechaLibroDescendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarFechaLibroDescendente_Result)">
+            <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarPaginasAutorAscendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarPaginasAutorAscendente_Result)">
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarPaginasAutorDescendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarPaginasAutorDescendente_Result)">
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarPaginasLibroAscendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarPaginasLibroAscendente_Result)">
+            <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarPaginasLibroDescendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarPaginasLibroDescendente_Result)">
+            <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarTituloAutorAscendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarTituloAutorAscendente_Result)">
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarTituloAutorDescendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarTituloAutorDescendente_Result)">
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarTituloLibroAscendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarTituloLibroAscendente_Result)">
+            <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpOrdenarTituloLibroDescendente" ReturnType="Collection(DBPruebaSEModel.SpOrdenarTituloLibroDescendente_Result)">
+            <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SpConsultaPorAutor_Result">
           <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
@@ -98,6 +182,102 @@
           <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
         </ComplexType>
         <ComplexType Name="SpConsultaPorLibro_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarFechaAutorAscendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarFechaAutorDescendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarFechaLibroAscendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarFechaLibroDescendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarPaginasAutorAscendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarPaginasAutorDescendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarPaginasLibroAscendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarPaginasLibroDescendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarTituloAutorAscendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarTituloAutorDescendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarTituloLibroAscendente_Result">
+          <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="pageCount" Nullable="true" />
+          <Property Type="String" Name="excerpt" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="SpOrdenarTituloLibroDescendente_Result">
           <Property Type="String" Name="title" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="publishDate" Nullable="true" MaxLength="40" />
           <Property Type="Int32" Name="pageCount" Nullable="true" />
@@ -141,6 +321,150 @@
           <FunctionImportMapping FunctionImportName="SpInsertarBook" FunctionName="DBPruebaSEModel.Store.SpInsertarBook" />
           <FunctionImportMapping FunctionImportName="SpInsertarCoverPhoto" FunctionName="DBPruebaSEModel.Store.SpInsertarCoverPhoto" />
           <FunctionImportMapping FunctionImportName="SpInsertarUser" FunctionName="DBPruebaSEModel.Store.SpInsertarUser" />
+          <FunctionImportMapping FunctionImportName="SpOrdenarFechaAutorAscendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarFechaAutorAscendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarFechaAutorAscendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarFechaAutorDescendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarFechaAutorDescendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarFechaAutorDescendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarFechaLibroAscendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarFechaLibroAscendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarFechaLibroAscendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarFechaLibroDescendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarFechaLibroDescendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarFechaLibroDescendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarPaginasAutorAscendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarPaginasAutorAscendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarPaginasAutorAscendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarPaginasAutorDescendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarPaginasAutorDescendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarPaginasAutorDescendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarPaginasLibroAscendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarPaginasLibroAscendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarPaginasLibroAscendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarPaginasLibroDescendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarPaginasLibroDescendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarPaginasLibroDescendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarTituloAutorAscendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarTituloAutorAscendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarTituloAutorAscendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarTituloAutorDescendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarTituloAutorDescendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarTituloAutorDescendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarTituloLibroAscendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarTituloLibroAscendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarTituloLibroAscendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpOrdenarTituloLibroDescendente" FunctionName="DBPruebaSEModel.Store.SpOrdenarTituloLibroDescendente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPruebaSEModel.SpOrdenarTituloLibroDescendente_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+                <ScalarProperty Name="pageCount" ColumnName="pageCount" />
+                <ScalarProperty Name="excerpt" ColumnName="excerpt" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
