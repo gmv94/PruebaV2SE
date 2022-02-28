@@ -104,13 +104,12 @@ namespace PruebaV2SE.Pages
                 if (oListAutorGrid.Count > 0)
                 {
                     gvwLibro.DataSource = oListAutorGrid;
-                    gvwLibro.Columns.Clear();
                     gvwLibro.DataBind();
                 }
                 else
                 {
                     lblConsult.Text = "No se encontraron registros";
-
+                    gvwLibro.Columns.Clear();
                     lblConsult.Visible = true;
                 }
             }
@@ -682,6 +681,17 @@ namespace PruebaV2SE.Pages
                 gvwLibro.DataSource = new DataTable();
                 gvwLibro.DataBind();
             }
+
+        }
+
+        /// <summary>
+        /// Dirige a la página de consultas múltiples
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnConsultaMultiple_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Pages/ConsultasMultiples.aspx");
 
         }
 

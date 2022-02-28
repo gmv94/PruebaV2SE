@@ -62,6 +62,15 @@ namespace PruebaV2SE.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpConsultaPorAutor_Result>("SpConsultaPorAutor", firstNameParameter, lastNameParameter);
         }
     
+        public virtual ObjectResult<SpConsultaPorAutores_Result> SpConsultaPorAutores(string author)
+        {
+            var authorParameter = author != null ?
+                new ObjectParameter("Author", author) :
+                new ObjectParameter("Author", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpConsultaPorAutores_Result>("SpConsultaPorAutores", authorParameter);
+        }
+    
         public virtual ObjectResult<SpConsultaPorLibro_Result> SpConsultaPorLibro(string title)
         {
             var titleParameter = title != null ?
@@ -69,6 +78,15 @@ namespace PruebaV2SE.Models
                 new ObjectParameter("title", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpConsultaPorLibro_Result>("SpConsultaPorLibro", titleParameter);
+        }
+    
+        public virtual ObjectResult<SpConsultaPorLibros_Result> SpConsultaPorLibros(string book)
+        {
+            var bookParameter = book != null ?
+                new ObjectParameter("Book", book) :
+                new ObjectParameter("Book", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpConsultaPorLibros_Result>("SpConsultaPorLibros", bookParameter);
         }
     
         public virtual ObjectResult<Nullable<int>> SpConsultarUsuario()

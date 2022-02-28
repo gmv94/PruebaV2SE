@@ -45,6 +45,7 @@
                     <div class="btn-group" role="group" aria-label="Basic outlined example">
                         <asp:Button ID="btnHome" CssClass="btn btn-outline-primary" runat="server" OnClick="btnHome_Click" Style="height: 30px; width: 100px; font-size: 12px; display: inline-block;" Text="Home" />
                         <asp:Button ID="btnConsultar" CssClass="btn btn-outline-primary" runat="server" OnClick="btnConsultar_Click" Style="height: 30px; width: 100px; font-size: 12px; display: inline-block;" Text="Consultar" />
+                        <asp:Button ID="btnConsultaMultiple" CssClass="btn btn-outline-primary" runat="server" OnClick="btnConsultaMultiple_Click" Style="height: 30px; width: 100px; font-size: 12px; display: inline-block;" Text="Autores/Libros" />
                     </div>
                 </div>
             </div>
