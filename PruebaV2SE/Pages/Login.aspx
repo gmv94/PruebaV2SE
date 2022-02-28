@@ -24,7 +24,8 @@
                 <asp:Label Text="" Visible="false" ID="lblConsult" runat="server" />
             </div>
             <div class="">
-                <asp:Button ID="btnConsult" CssClass="btn btn-success" runat="server" OnClick="btnConsult_Click" Style="height: 120%; width: 50%; font-size: 12px; display: inline-block;" Text="Consult" />
+                <asp:Button ID="btnConsult" CssClass="btn btn-success" runat="server" OnClick="btnConsult_Click" Style="height: 50%; width: 50%; font-size: 12px; display: inline-block;" Text="Login" /><br />
+                <asp:Button ID="btnDatos" CssClass="btn btn-primary" runat="server" OnClick="btnDatos_Click" Style="height: 50%; width: 50%; font-size: 12px; display: inline-block;" Text="Obtener Datos" />
             </div>
         </div>
     </div>

@@ -64,6 +64,7 @@ namespace PruebaV2SE.Pages
                 else
                 {
                     lblConsult.Text = "No se encontraron registros";
+                    gvwLibro.Columns.Clear();
                     lblConsult.Visible = true;
                 }
             }
@@ -103,11 +104,13 @@ namespace PruebaV2SE.Pages
                 if (oListAutorGrid.Count > 0)
                 {
                     gvwLibro.DataSource = oListAutorGrid;
+                    gvwLibro.Columns.Clear();
                     gvwLibro.DataBind();
                 }
                 else
                 {
                     lblConsult.Text = "No se encontraron registros";
+
                     lblConsult.Visible = true;
                 }
             }

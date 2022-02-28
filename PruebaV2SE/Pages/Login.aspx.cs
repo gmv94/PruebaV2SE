@@ -17,9 +17,10 @@ namespace PruebaV2SE.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if(!IsPostBack)
             {
-                InsertarDatosIniciales();
+                btnDatos.Visible = false;
+                lblConsult.Visible = false;
             }
         }
 
@@ -35,15 +36,50 @@ namespace PruebaV2SE.Pages
         /// </summary>
         private void InsertarDatosIniciales()
         {
-            DBPruebaSEEntities oDBPruebaSE = new DBPruebaSEEntities();
-            var resultadoConsulta = oDBPruebaSE.SpConsultarUsuario();
-            if (resultadoConsulta.ToList().Count == 0)
+            try
             {
-                insertarUsuarios();
-                insertarLibros();
-                insertarAutor();
-                insertarCoverPhoto();
-                insertarActividades();
+                DBPruebaSEEntities oDBPruebaSE = new DBPruebaSEEntities();
+                var resultadoConsulta = oDBPruebaSE.SpConsultarUsuario();
+                if (resultadoConsulta.ToList().Count == 0)
+                {
+                    insertarUsuarios();
+                    insertarLibros();
+                    insertarAutor();
+                    insertarCoverPhoto();
+                    insertarActividades();
+                    btnDatos.Visible = false;
+                    btnConsult.Visible = true;
+                    lblConsult.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblConsult.Text = ex.Message;
+                lblConsult.Visible = true;
+            }
+        }
+
+        private bool ValidarDatosIniciales()
+        {
+            try
+            {
+                DBPruebaSEEntities oDBPruebaSE = new DBPruebaSEEntities();
+                var resultadoConsulta = oDBPruebaSE.SpConsultarUsuario();
+                if (resultadoConsulta.ToList().Count == 0)
+                {
+                    lblConsult.Text = "La base de datos está vacía, por favor obtener los datos antes de ingresar";
+                    lblConsult.Visible = true;
+                    btnDatos.Visible = true;
+                    btnConsult.Visible = false;
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lblConsult.Text = ex.Message;
+                lblConsult.Visible = true;
+                return false;
             }
         }
 
@@ -134,9 +170,11 @@ namespace PruebaV2SE.Pages
             foreach (var item in users)
             {
                 if (item.userName == txtUser.Value
-                    || item.password == txtPw.Value)
+                    && item.password == txtPw.Value)
+                {
                     Session["id"] = item.id;
-                return true;
+                    return true;
+                }
             }
             return false;
         }
@@ -150,23 +188,46 @@ namespace PruebaV2SE.Pages
         {
             try
             {
-                if (ValidarFormulario())
+                if(ValidarDatosIniciales())
                 {
-                    if (ConsultarUsuario())
+                    if (ValidarFormulario())
                     {
-                        Response.Redirect("/Pages/Consultas.aspx");
+                        if (ConsultarUsuario())
+                        {
+                            Response.Redirect("/Pages/Consultas.aspx");
+                        }
+                        else
+                        {
+                            lblConsult.Text = "Datos de usuario incorrectos";
+                            lblConsult.Visible = true;
+                        }
                     }
                     else
                     {
-                        lblConsult.Text = "Datos de usuario incorrectos";
+                        lblConsult.Text = "Por favor ingrese los datos requeridos";
                         lblConsult.Visible = true;
                     }
                 }
                 else
                 {
-                    lblConsult.Text = "Por favor ingrese los datos requeridos";
+                    lblConsult.Text = "La base de datos está vacía, por favor obtener los datos antes de ingresar";
                     lblConsult.Visible = true;
                 }
+                
+            }
+            catch (Exception ex)
+            {
+                lblConsult.Text = ex.Message;
+                lblConsult.Visible = true;
+            }
+        }
+
+
+        protected void btnDatos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                InsertarDatosIniciales();
             }
             catch (Exception ex)
             {
